@@ -20,8 +20,8 @@ def stem_word(words, model_name='seq2seq'):
         return f'<p>Not implemented yet!</p>'
 
     global model
-    stem = model.predict_root_word(words)
-    
+    stem = model.predict(words)
+
     return f'<p>{stem}</p>'
 
 

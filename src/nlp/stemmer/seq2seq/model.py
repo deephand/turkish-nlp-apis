@@ -43,4 +43,11 @@ class Model:
             char_probs[0, 0, best_char_index] = 1.0 
             decoder_input = [char_probs] + decoder_output[0:-1]
         return predict_word[:-3]
-
+    
+    def predict(self, words):
+        words_list = words.split()
+        words_list = [self.filter_word(word) for word in words_list]
+        return ' '.join([self.predict_root_word(word) for word in words_list])
+    
+    def filter_word(self, word):
+        return ''.join([chr for chr in word if chr in self.token_index_map])

@@ -1,1 +1,1 @@
-web: flask run
+web: gunicorn 'src.create_app:create_app()'

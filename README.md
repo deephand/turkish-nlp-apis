@@ -5,4 +5,10 @@ Setup:
 1. `python -m venv venv`
 1. `. venv/bin/activate`
 1. `pip install -r requirements.txt`
-1. 
+1. `heroku create`
+1. `git push heroku main`
+
+
+Local testing:
+
+1. `heroku local`
